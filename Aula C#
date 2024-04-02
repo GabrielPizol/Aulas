@@ -1,0 +1,46 @@
+using System.ComponentModel;
+
+namespace Aula_Csharp
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Digite a 1 medida do triangulo X:");
+            double x1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a 2 medida do triangulo X");
+            double x2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a 3 medida do triangulo X");
+            double x3 = double.Parse(Console.ReadLine());
+
+
+            Console.WriteLine("Digite a 1 medida do triangulo Y");
+            double y1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a 2 medida do triangulo Y");
+            double y2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a 3 medida do triangulo Y");
+            double y3 = double.Parse(Console.ReadLine());
+
+            double px = (x1 + x2 + x3)/2;
+            
+            double areax;
+            areax = Math.Sqrt(px * (px - x1) * (px - x2) * (px - x3));
+                Console.Write($"Área de X =" + (areax));
+
+            double py = (y1 + y2 + y3)/2;
+
+            double areay = Math.Sqrt(py * (py - x1) * (py - y2) * (py - y3));
+                Console.Write($"Área de y =" + (areay));
+
+            if (areax > areay)
+            {
+                Console.WriteLine("Maior área: X");
+            }
+            else
+            {
+                Console.WriteLine("Maior área: Y");
+            }
+
+        }
+    }
+}
