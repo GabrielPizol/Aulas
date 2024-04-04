@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formtação CSS</title>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+    <p>Texto formatado</p>
+    <p class="texto_format1">Texto Formatado</p>
+    <p class="texto_format2">Texto Formatado</p>
+    <p class="texto_format3">Texto Formatado</p>
+    <textarea class="texto_format4" readonly>Texto Formatado</textarea>
+    <p class="amarelo">Texto Formatado</p>
+    <p class="verde">Texto Formatado</p>
+
+
+</body>
+</html>
+
+css
+
+.texto_format1{
+    font-family:cursive,serif;
+     color: #0000CD;
+     font-size: 20px;
+}
+
+.texto_format2{
+    font-family:Arial, Helvetica, sans-serif;
+     color: #f900e8;
+     font-size: 21px;
+     text-align: center;
+     white-space: nowrap; /* Impede quebra de linha */
+     overflow: hidden; /* Esconder o que ultrapassar a largura */
+    border: 2px solid blue;
+    }
+
+.texto_format3{
+        font-family:Arial, Helvetica, sans-serif;
+         color: #006cf9;
+         font-size: 21px;
+         text-align: center;
+         white-space: nowrap; /* Impede quebra de linha */
+         overflow: hidden; /* Esconder o que ultrapassar a largura */
+        border: 2px solid blue;  
+    }
+@keyframes marquee{
+    0%{transform: translate(100%)}
+    100%{transform:translate(0%)}
+} 
+
+.texto_format3{
+    animation: marquee 5s linear infinite;
+}
+
+.texto_format4{
+    width: 300px; /* largura */
+    height: 200px; /* altura */
+    resize: none;
+}
+
+.span-container{
+    display: flex;
+}
+
+.span-container span{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.amarelo{
+    color:yellow;
+    background-color:green;
+}
+
+.verde{
+    color: green;
+    background-color: yellow;
+}
