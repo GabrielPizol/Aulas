@@ -1,0 +1,53 @@
+#Exemplo de Decomposição
+#Programa para calcular a média de 3 notas
+def obter_notas():
+    notas=[] # Lista Vazia 
+    # Abrir um loop (laço) que repete 3 vezes
+    for i in range (3):
+              nota=float(input(f"Digite a nota {i+1}:"))
+              nota.append(nota)
+              return notas
+        
+def calcular_media(notas):
+    total=sum(notas)
+    media=total/len(notas)
+    return media
+    
+def imprimir_resultado(media):
+    print (f"A média das notas é: {media}")
+    
+def main():
+    print("Calculadora de Média")
+    notas=obter_notas()
+    media=calcular_media(notas)
+    imprimir_resultado(media)
+    
+if _name_=="_main_":
+    main()
+    
+======================================================
+
+#Exemplo de Reconhecimento de Padrão
+#Números pares e ímpares
+def indentificar_pares_impares(lista):
+    pares = 0
+    impares = 0
+    
+    for num in lista:
+        if num % 2 == 0: # Divide num por 2 verifica o resto
+            pares += 1
+        else:
+            impares += 1
+        return pares, impares
+        
+def main():
+    print("Reconhecimento de Padrão")
+    lista_numeros=input("Digite uma sequência de número").split()
+    lista_numeros=[int(num)for num in lista_numeros]
+    num_pare, num_impares =  indentificar_pares_impares(lista_numeros)
+    print(f"Total de pares: {num_pares}")
+    print(f"Total de impares: {num_impares}")
+    
+if _name_=="_main_":
+    main()
+    
