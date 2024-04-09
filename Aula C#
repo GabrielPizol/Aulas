@@ -44,3 +44,61 @@ namespace Aula_Csharp
         }
     }
 }
+
+=========================================================================================
+
+using System.Globalization;
+
+namespace Aula_Csharp
+{
+    internal class Program
+    {
+        public static (double, double, double) CapturaCoordenadas()
+        {
+
+            double aA, aB, aC;
+            Console.WriteLine("Entre com as medidas do triangulo: ");
+            aA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            aB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            aC = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            return (aA, aB, aC);
+        }
+
+        private static void main()
+        {
+            double xA, xB, xC, yA, yB, yC;
+
+            (xA, xB, xC) = CapturaCoordenadas();
+            (yA, yB, yC) = CapturaCoordenadas();
+        }
+
+        private static List<double> CapturaCoordenadas_V2()
+        {
+            List<double> listagenerica = new();
+            Console.WriteLine("Entre com as medidas do triângulo: ");
+
+            for (int i = 0; i < 3; i++) ;
+            listagenerica.Add(double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture));
+
+            return listagenerica;
+        }
+
+        private static double RetornaAreaV2(List<double> triangulo)
+        {
+            double p = (triangulo[0] + triangulo[1] + triangulo[2] / 2.0;
+
+            double area = Math.Sqrt(p * (p - triangulo[0]) * (p - triangulo[1]) * (p - triangulo[2]));
+
+            return area;
+        }
+
+        public static void main()
+        {
+            List<double> primeiroTriangulo = new();
+            List<double> segundoTriangulo = new();
+            primeiroTriangulo = CapturaCoordenadasV2();
+            segundoTriangulo = CapturaCoordenadasV2();
+        }
+    }
+}
