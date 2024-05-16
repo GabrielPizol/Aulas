@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<input type="checkbox" id="checar">
+   <label for="checar">&#9776;</label>
+    <nav class="menu">
+     <ul>
+<li><a href="#">Home</a>
+   </li>
+<li><a href="#">Produtos</a>
+     <ul>
+        <li><a href="#">Vestidos</a></li>
+        <li><a href="#">Camisas</a></li>
+        <li><a href="#">Calças</a></li>
+     </ul>
+    </li>
+     <li><a href="#">Serviços</a>
+      <ul>
+        <li><a href="#">Venda Online</a></li>
+        <li><a href="#">Ajuste e Reparos</a></li>
+      </ul>
+    </li>
+      <li><a href="#">Contatos</a>
+     </ul>
+    </li>
+   </nav>
+</body>
+</html>
+
+
+
+
+.pai{
+    width: 80vw;
+    height: 80vh;
+    background-color: blue;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+.filho{
+    width: 60vw;
+    height: 60vh;
+    background-color: yellow;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    font-family: Arial;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+width: 150px;
+float: left;
+}
+.menu a{
+    padding: 20px;
+    display:block;
+    text-decoration: none;
+    text-align: center;
+    background-color: black;
+    color: azure;
+}
+.menu ul ul{
+    position: absolute;
+    visibility: hidden;
+}
+.menu ul li:hover ul{
+    visibility: visible;
+}
+.menu a:hover{
+background-color: azure;
+color: black;
+}
+.menu ul ul li{
+    float:none;
+    border-bottom: 1px solid blueviolet;
+}
+.menu ul ul li a{
+    background-color: rgb(38, 4, 64);
+}
+label[for="checar"]{
+    padding: 5px;
+    background-color: black;
+    color: azure;
+    font-family: Arial;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    height: 50px;
+}
+#checar{
+    display: none;
+}
+label[for="checar"]{
+    display:none;
+}
+@media(max-width: 800px){
+    label[for="checar"]{
+        display:block;
+    }
+#checar:checked ~ .menu{
+    margin-left: 0;
+}
+.menu{
+margin-top: 5px;
+margin-left: -100%;
+transition: all .4s;
+}
+
+}
+
+.menu ul li{
+    width: 100%;
+    float: none;
+}
+
+.menu ul ul{
+    position: static;
+    overflow: hidden;
+    max-height: 0;
+transition: all, 4s;
+}
+
+.menu ul li:hover ul{
+    height: auto;
+    max-height: 200px;
+}
