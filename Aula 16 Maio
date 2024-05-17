@@ -1,0 +1,95 @@
+namespace Pensamento_Computacional_16_Maio
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char oper;
+            Console.WriteLine("Digite a operação +, -, *, /");
+            oper = Convert.ToChar(Console.ReadLine());
+
+            Console.WriteLine("Digite o primeiro número");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Digite o primeiro número");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            double result = 0;
+
+            switch (oper)
+            {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+
+                    if (num2 != 0)
+                    {
+                        result = num1 / num2;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Divisão por ZERO não é permitida");
+                        return;
+                    }
+                    break;
+                default:
+
+                    Console.WriteLine("Operação Inválida");
+                    return;
+
+            }
+            Console.WriteLine("O resultado é " + result);
+            Console.ReadKey();
+        }
+    }
+}
+
+
+
+
+
+namespace Pensamento_Computacional_16_Maio
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ConsoleColor corTexto;
+            ConsoleColor corFundo;
+
+            Console.WriteLine("Escolha a cor do texto");
+            ListarCores();
+            Console.WriteLine();
+            corTexto = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), Console.ReadLine(), true);
+
+            Console.WriteLine("Escolha a cor do fundo");
+            ListarCores();
+            Console.WriteLine();
+            corFundo = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), Console.ReadLine(), true);
+
+            Console.ForegroundColor = corTexto;
+            Console.BackgroundColor = corFundo;
+            Console.Clear();
+
+            Console.WriteLine("Frase com cores");
+            Console.ReadKey();
+        }
+        static void ListarCores()
+        {
+            foreach(var cor in Enum.GetValues(typeof(ConsoleColor)))
+            {
+                Console.WriteLine(cor);
+            }
+        }
+
+    }
+}
